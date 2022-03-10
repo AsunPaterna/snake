@@ -53,22 +53,6 @@ public class MainWindow extends JFrame {
         s1 = new WelcomeScreen(this);
         s1.setTitle("Snake and Ladders");
 
-        /*
-		JPanel jp2 = new JPanel(new FlowLayout());
-		JLabel jl2 = new JLabel("Panel 2");
-		JButton jb2 = new JButton("Go ahead!");
-		jp2.add(jb2);
-		jb2.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent event){
-				cl.show(cards, "Three");
-			}
-		});
-		
-		jp2.setSize(this.getSize());
-		jp2.add(jl2);
-		jp2.setVisible(true);
-		
-         */
         JPanel jp5 = new JPanel(new FlowLayout());
         JLabel jl5 = new JLabel("Panel 5");
 
@@ -84,15 +68,13 @@ public class MainWindow extends JFrame {
         cards.add(s2, "Two");
         cards.add(s3, "Three");
         cards.add(s4, "Four");
-
-        //cards.add(jp2,"Two");
-        //cards.add(jp4,"Four");
         cards.add(jp5, "Five");
-
+        
         cl = (CardLayout) (cards.getLayout());
-
         cl.show(cards, "One");
         showCard("One");
     }
-
 }
+
+
+

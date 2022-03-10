@@ -22,8 +22,8 @@ public class WelcomeScreen extends JPanel {
     JLabel title;
     JButton go;
     JButton quit;
-
     MainWindow mw;
+
 
     public void setTitle(String t) {
         title.setText(t);
