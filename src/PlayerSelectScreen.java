@@ -8,7 +8,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-//needs massive aesthetic rewrites
+/**
+ * @author Asunción Paterna Capilla
+ * @version v1.0
+ * @see JPanel
+ */
 public class PlayerSelectScreen extends JPanel {
 
     JButton go;
@@ -71,9 +75,9 @@ public class PlayerSelectScreen extends JPanel {
 
         JLabel mess = new JLabel(select_Players_);
         add(mess);
-
         JLabel uc = new JLabel(default_1Player);
         add(uc);
+
 
         //set up radio buttons
         opt1 = new JRadioButton(_PlayerDefault);

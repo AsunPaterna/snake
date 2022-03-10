@@ -6,9 +6,19 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 
+// <editor-fold desc="Anotaciones">> 
 //note: board does not change dynamically 
 //note: board shape and window aesthetics to be set
 //note: unification of colors not done
+// </editor-fold>
+
+/**
+ * @author Asunción Paterna Capilla
+ * @version v1.0
+ * @see JPanel
+ */
+
+
 public class BoardDrawing extends JPanel {
 
 // <editor-fold desc="Extracciones de método">> 
@@ -29,14 +39,19 @@ public class BoardDrawing extends JPanel {
 
     BoardScreen bs;
 
+    /**
+     * @param row - fila
+     * @param col - columna
+     * @param bs  - tablero
+     */
+     
     public BoardDrawing(int row, int col, BoardScreen bs) {
         this.bs = bs;
-
         this.row = row;
         this.col = col;
-        
-        cells = new ArrayList<Rectangle>();
 
+        cells = new ArrayList<Rectangle>();
+        
         cellnos = new int[row * col];
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
@@ -60,8 +75,12 @@ public class BoardDrawing extends JPanel {
             Portal temp = new Portal(row * col);
             bs.portals.add(temp);
         }
-
     }
+
+/**
+ * paintComponent - Método gráfico de componentes.
+ * @param g - graficos
+ */
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -151,11 +170,15 @@ public class BoardDrawing extends JPanel {
                     break;
                 }
             }
-
             g2d.drawLine((int) cells.get(ind).getCenterX(), (int) cells.get(ind).getCenterY(), (int) cells.get(j).getCenterX(), (int) cells.get(j).getCenterY());
         }
     }
 
+/**
+ * ensurePlayerPosition - Método de posición del jugador
+ * @param pnos int
+ * @return String message 
+ */
        public String ensurePlayerPosition(int pnos) {
         String message = "";
         for (Portal port : bs.portals) {
@@ -171,7 +194,11 @@ public class BoardDrawing extends JPanel {
         return message;
     }
 
-
+/**
+ * setPlayer - Método de posicionar
+ * @param a int
+ * @param pnos int
+ */
     public void setPlayer(int a, int pnos) {
         bs.players.get(pnos).incPosition(a);
     }

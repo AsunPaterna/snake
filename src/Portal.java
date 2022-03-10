@@ -2,6 +2,10 @@
 import java.awt.Point;
 import java.util.Random;
 
+/**
+ * @author Asunción Paterna Capilla
+ * @version v1.0
+ */
 public class Portal {
 
     private int nature; //-1 for snake , +1 for ladder
@@ -18,15 +22,22 @@ public class Portal {
             nature = -1;
         }
     }
-
+ 
+/**
+ * @return int - natural
+ */
     public int returnNature() {
         return nature;
     }
-
+/**
+ * @return int - inicio
+ */
     public int returnStart() {
         return start;
     }
-
+/**
+ * @return int - final
+ */
     public int returnEnd() {
         return end;
     }

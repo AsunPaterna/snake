@@ -1,6 +1,10 @@
 
 import java.awt.Color;
 
+/**
+ * @author Asunción Paterna Capilla
+ * @version v1.0
+ */
 public class Player {
 
     private String name;

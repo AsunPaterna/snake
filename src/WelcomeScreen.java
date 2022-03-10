@@ -9,7 +9,11 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-
+/**
+ * @author Asunción Paterna Capilla
+ * @version v1.0
+ * @see JPanel
+ */
 public class WelcomeScreen extends JPanel {
 // <editor-fold desc="Extracciones a constantes">> 
 

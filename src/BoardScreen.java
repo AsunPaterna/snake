@@ -11,6 +11,12 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+/**
+ * @author Asunción Paterna Capilla
+ * @version v1.0
+ * @see JPanel
+ */
+
 public class BoardScreen extends JPanel {
 
     BoardDrawing bd;
@@ -37,9 +43,6 @@ public class BoardScreen extends JPanel {
         }
     }
 
-
-
-
     public void goButtonActionListener() {
         mw.showCard("Two");
         mw.resetAll();
@@ -59,7 +62,6 @@ public class BoardScreen extends JPanel {
             players.add(new Player(i));
         }
         //get and add player(s) names
-
         //manual color entry - automate later
         if (0 < returnMaxPlayers()) {
             players.get(0).setPlayerColor(Color.green);
@@ -174,3 +176,7 @@ public class BoardScreen extends JPanel {
     }
 
 }
+
+
+
+
